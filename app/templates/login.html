@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/css/login/style.css" />
+    <link rel="stylesheet" href="../static/css/globals.css" />
+    <link rel="stylesheet" href="../static/css/login/styleguide.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="content-area-left">
+          <div class="text-area">
+            <div class="text-wrapper">CONTACT</div>
+            <div class="text-wrapper-2">동동주와 친구들의 블로그</div>
+          </div>
+          <p class="p">
+            <span class="span"
+              >안녕하세요!&nbsp;&nbsp;동동주와 친구들입니다.<br />저희는 빅데이터 양성과정을 진행하며 풀스택 개발자를
+              꿈꾸며<br/> 세종 근처의 인기있는 카페에 대해 소개하는 블로그를 운영하고 있습니다.
+            </span>
+          </p>
+        </div>
+        <div class="form">
+          <div class="text-area"><div class="text-wrapper-3">Contact us</div></div>
+          <p class="p">저희와 소통하고 함께하길 원한다면 로그인을 진행해주세요.</p>
+        </div>
+        <div class="div-2">
+          <div class="navbar-menu">
+            <div class="navbar-menu-item">
+              <div class="active-link" onclick="location.href='/index'">
+                <div class="text-wrapper-4">Home</div>
+                <div class="border"></div>
+              </div>
+            </div>
+            <div class="div-wrapper"><div class="text-wrapper-5">Story</div></div>
+            <div class="careers-wrapper"><div class="text-wrapper-5">About We</div></div>
+          </div>
+          <div class="div-2">
+            <div class="overlap-group">
+              <div class="navigation">
+                <div class="logo-container">
+                  <div class="logo-finance">
+                    <div class="shape">
+                      <div class="rectangle"></div>
+                      <div class="rectangle-2"></div>
+                      <div class="rectangle-3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar-menu-2">
+                  <div class="navbar-menu-item">
+                    <div class="active-link">
+                      <div class="text-wrapper-4">Home</div>
+                      <div class="border"></div>
+                    </div>
+                  </div>
+                  <div class="div-wrapper"><div class="text-wrapper-5">Story</div></div>
+                  <div class="careers-wrapper"><div class="text-wrapper-5">About We</div></div>
+                </div>
+                <div class="buttons">
+                  <div class="text-wrapper-5">Sign up</div>
+                  <button class="button"><div class="label">Log in</div></button>
+                </div>
+              </div>
+              <div class="text-wrapper-6">동동주와 친구들의 BLOG</div>
+            </div>
+          </div>
+        </div>
+        <div class="frame">
+          <form method="POST" action="/login">
+            <div class="frame-2">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+            </div>
+            <div class="frame-2">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            <div class="button-wrapper">
+              <button type="submit" onclick="location.href='/index'">Log in</button>
+            </div>
+          </form>
+          <button class="frame-3">
+            <button type="button" class="button-2" onclick="location.href='/signup'"><div class="contact-us">Sign Up</div></button>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

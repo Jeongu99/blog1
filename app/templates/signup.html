@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/css/globals.css" />
+    <link rel="stylesheet" href="../static/css/signup/signupstyle.css" />
+    <link rel="stylesheet" href="../static/css/signup/signupstyleguide.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="frame">
+          <!-- Form 시작 -->
+          <form method="POST" action="/signup">
+            <div class="frame-2">
+              <label class="text-wrapper" for="input-1">Email *</label>
+              <input class="input" placeholder="Enter your email address" type="email" id="email" name="email" required />
+            </div>
+            <div class="frame-3">
+              <label class="text-wrapper" for="input-2">Password *</label>
+              <input class="input" placeholder="At least 6 characters" type="password" id="password" name="password" required />
+            </div>
+            <div class="frame-2">
+              <label class="text-wrapper">Re-enter Password *</label>
+              <input class="input" placeholder="Re-enter Password" type="password" id="re_password" required />
+            </div>
+            <!-- Submit 버튼 -->
+            <button type="submit" class="button-wrapper">Sign Up</button>
+          </form>
+          <!-- Form 끝 -->
+
+          <!-- 플래시 메시지 처리 및 Jinja2로 직접 처리 -->
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <script type="text/javascript">
+                  alert("{{ message }}");  // 플래시 메시지를 직접 alert 창으로 표시
+                </script>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        const password = document.getElementById("password").value;
+        const rePassword = document.getElementById("re_password").value;
+
+        if (password !== rePassword) {
+          e.preventDefault();
+          alert("비밀번호가 일치하지 않습니다!");
+        }
+      });
+    </script>
+  </body>
+</html>
+
